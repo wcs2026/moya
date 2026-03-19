@@ -124,6 +124,141 @@
 .ot-vegan-e { color:#1a7a5a; } .ot-vegan-h { color:#b03030; } .ot-vegan-o { color:#7a5a10; }
 
 
+  
+    /* ── RESPONSIVE — TABLET & MOBİL ─────────────────────── */
+    @media(max-width:900px){
+      .wrap{padding:16px 14px 60px}
+      .cover{padding:32px 24px;border-radius:22px}
+      .cover h1{font-size:clamp(28px,8vw,48px)}
+      .chapter{padding:28px 22px;border-radius:18px}
+      .chapter h2{font-size:clamp(22px,6vw,36px)}
+      .toc{grid-template-columns:repeat(2,1fr)}
+      .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .grid-2{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:repeat(2,1fr)}
+      .insight-grid{grid-template-columns:1fr}
+      .opp-grid{grid-template-columns:1fr}
+      .section-head{flex-direction:column;align-items:flex-start;gap:4px}
+      .section-head p{font-size:12px}
+    }
+
+    @media(max-width:600px){
+      .wrap{padding:12px 10px 60px}
+      .cover{padding:24px 18px;border-radius:16px;margin-bottom:12px}
+      .cover h1{font-size:clamp(24px,9vw,40px);line-height:1}
+      .cover-lead{font-size:14px}
+      .chapter{padding:22px 18px;border-radius:16px;margin:24px 0 14px}
+      .chapter h2{font-size:clamp(20px,7vw,30px)}
+      .chapter-desc{font-size:13px}
+      .toc{grid-template-columns:1fr 1fr;gap:8px}
+      .toc a{padding:12px}
+      .toc .label{font-size:13px}
+      .grid,.grid-2,.grid-4{grid-template-columns:1fr;gap:12px}
+      .media{height:280px}
+      .section-head h3{font-size:20px}
+      .insight{padding:20px 16px}
+      .insight-grid{grid-template-columns:1fr;gap:12px}
+      .opp-grid{grid-template-columns:1fr}
+      
+      /* Alt kategori bannerlar */
+      div[style*="border-radius:18px;padding:32px 36px"]{
+        padding:20px 18px !important;margin-top:28px !important;
+      }
+      div[style*="border-radius:18px;padding:32px 36px"] h2{
+        font-size:24px !important;
+      }
+
+      /* Kategori header dark box */
+      div[style*="border-radius:14px;padding:24px 30px"]{
+        padding:16px 18px !important;
+      }
+
+      /* Protein Cookie kartları — tek sütun */
+      div[style*="grid-template-columns:1fr 1fr;gap:14px"]{
+        grid-template-columns:1fr !important;
+      }
+      /* Protein cookie kart inner grid */
+      div[style*="grid-template-columns:1fr 1fr;"]{
+        grid-template-columns:1fr !important;
+      }
+      /* Makro grid */
+      div[style*="grid-template-columns:repeat(5,1fr)"]{
+        grid-template-columns:repeat(3,1fr) !important;
+      }
+      
+      /* Cover not */
+      div[style*="border-top:1px solid rgba(255,255,255,.1)"]{
+        margin-top:20px !important;padding-top:14px !important;
+      }
+
+      /* Problem & Fırsat 2 kolon → 1 */
+      div[style*="grid-template-columns:1fr 1fr;gap:28px"],
+      div[style*="grid-template-columns:1fr 1fr;gap:24px"],
+      div[style*="grid-template-columns:1fr 1fr;gap:20px"]{
+        grid-template-columns:1fr !important; gap:16px !important;
+      }
+
+      /* Fırsat haritası tablo — scroll */
+      div[style*="overflow-x:auto"]{overflow-x:auto !important}
+      table{font-size:11px !important;min-width:600px}
+
+      /* Sonraki adımlar 3 kart → 1 */
+      .grid[style*="grid-template-columns:repeat(3"]{
+        grid-template-columns:1fr !important;
+      }
+
+      /* Roadmap 3 kolon → 1 */
+      div[style*="display:grid;grid-template-columns:repeat(3,1fr);gap:0"]{
+        grid-template-columns:1fr !important; gap:24px !important;
+      }
+      div[style*="padding:0 24px 0 0;border-right"],
+      div[style*="padding:0 24px;border-right"],
+      div[style*="padding:0 0 0 24px"]{
+        padding:0 !important; border-right:none !important;
+        border-top:1px solid rgba(255,255,255,.1);padding-top:20px !important;
+      }
+      div[style*="padding:0 24px 0 0;border-right"]{border-top:none !important;padding-top:0 !important}
+
+      /* En büyük fırsat kutusu */
+      div[style*="grid-template-columns:1fr auto"]{
+        grid-template-columns:1fr !important;
+      }
+
+      /* Ürün geliştirme yaklaşımı 3 kart */
+      div[style*="grid-template-columns:repeat(3,1fr);gap:16px"]{
+        grid-template-columns:1fr !important;
+      }
+
+      /* Global insight grid 3 kart */
+      div[style*="display:grid;grid-template-columns:repeat(3,1fr);gap:16px"]{
+        grid-template-columns:1fr !important;
+      }
+      
+      /* K3 dark box 2 kolon */
+      div[style*="display:grid;grid-template-columns:1fr 1fr;gap:24px"]{
+        grid-template-columns:1fr !important; gap:16px !important;
+      }
+
+      /* Nav toggle */
+      #nav-toggle{top:12px;right:12px;padding:8px 12px;font-size:12px}
+      #nav-panel{width:280px}
+
+      /* ozet-table scroll */
+      .ozet-wrap{overflow-x:auto}
+      .ozet-table{min-width:500px}
+
+      /* K2 Türkiye Fırsat 2 kutu */
+      div[style*="grid-template-columns:repeat(2,1fr);gap:10px"]{
+        grid-template-columns:1fr !important;
+      }
+    }
+
+    @media(max-width:400px){
+      .toc{grid-template-columns:1fr}
+      .cover h1{font-size:26px}
+      #nav-panel{width:100vw;right:-100vw}
+    }
+
   </style>
 </head>
 <body>
