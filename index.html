@@ -435,6 +435,13 @@
         flex-direction: column !important;
       }
     }
+
+    @media(max-width:640px){
+      .k4-outer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -515,7 +522,7 @@
   <h2>Türkiye'de Ne Var?</h2>
   <p class="chapter-desc">Türkiye'deki glutensiz ve protein snack markalarına bakış. Bu ürünler nasıl görünüyor, ne söylüyor, nerede satılıyor? Rakip olmayacağımız noktaları ve doldurabileceğimiz boşlukları birlikte görelim.</p>
 
-<div class="section-head"><h3 style="color:#fff">Ta'da</h3><p style="color:rgba(255,255,255,.5)">Biscotti · Cookie · Grissini · Kraker</p></div>
+<div id="ta-da" class="section-head"><h3 style="color:#fff">Ta'da</h3><p style="color:rgba(255,255,255,.5)">Biscotti · Cookie · Grissini · Kraker</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="eager" decoding="async" src="https://wcs2026.github.io/110000698737458.jpg" alt="Hindistan Cevizli Kurabiye"></div><div class="body"><div class="brand-tag">Ta'da</div><p class="product-name">Hindistan Cevizli Kurabiye</p><p class="product-desc">hindistan cevizli glutensiz kurabiye</p></div></div>
   <div class="card"><div class="media"><img loading="eager" decoding="async" src="https://wcs2026.github.io/685c50bad797bcf8e58bd09f_biscotti.png" alt="Biscotti"></div><div class="body"><div class="brand-tag">Ta'da</div><p class="product-name">Biscotti</p><p class="product-desc">klasik bademli glutensiz biscotti</p></div></div>
@@ -534,7 +541,7 @@
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/4b8213e6-83fb-46cd-a538-b92ed9423b3c.webp" alt="Kayısılı Bademli Kurabiye — Paket"></div><div class="body"><div class="brand-tag">Ta'da</div><p class="product-name">Kayısılı Bademli Kurabiye — Paket</p><p class="product-desc">kayısı + bademli glutensiz kurabiye · çoklu satış paketi</p></div></div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">Guru</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Biscotti · Cookie</p></div>
+<div id="guru" class="section-head"><h3 style="color:#fff">Guru</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Biscotti · Cookie</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/33-biscotti-uzum-glutensiz.jpg" alt="Glutensiz Üzümlü Biscotti"></div><div class="body"><div class="brand-tag">Guru</div><p class="product-name">Glutensiz Üzümlü Biscotti</p><p class="product-desc">üzümlü glutensiz biscotti</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/32-biscotti-badem-glutensiz_min.webp" alt="Glutensiz Bademli Biscotti"></div><div class="body"><div class="brand-tag">Guru</div><p class="product-name">Glutensiz Bademli Biscotti</p><p class="product-desc">bademli glutensiz biscotti</p></div></div>
@@ -543,7 +550,7 @@
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/38-tuzlu-kurabiye-glutensiz.jpg" alt="Glutensiz Tuzlu Kurabiye"></div><div class="body"><div class="brand-tag">Guru</div><p class="product-name">Glutensiz Tuzlu Kurabiye</p><p class="product-desc">tuzlu glutensiz kurabiye</p></div></div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">Kind of Balanced</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Cookie · Kıtır · Biscotti</p></div>
+<div id="kind-of-balanced" class="section-head"><h3 style="color:#fff">Kind of Balanced</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Cookie · Kıtır · Biscotti</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/1_746eb771-a6f6-4a0c-81d6-9bffd6fb2b20.webp" alt="Biscotti"></div><div class="body"><div class="brand-tag">Kind of Balanced</div><p class="product-name">Biscotti</p><p class="product-desc">klasik bademli glutensiz biscotti</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/2_f080aba8-922d-4b37-924d-cdc872e927ca.webp" alt="Sütlü Çikolatalı Kinoa Patlağı"></div><div class="body"><div class="brand-tag">Kind of Balanced</div><p class="product-name">Sütlü Çikolatalı Kinoa Patlağı</p><p class="product-desc">sütlü çikolata ve kinoa patlağı atıştırmalık</p></div></div>
@@ -555,7 +562,7 @@
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/karabugdayli-kitir.webp" alt="Karabuğdaylı Kıtır"></div><div class="body"><div class="brand-tag">Kind of Balanced</div><p class="product-name">Karabuğdaylı Kıtır</p><p class="product-desc">karabuğday unlu kıtır kraker</p></div></div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">Mayalıhane</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Cookie · Düşük Proteinli</p></div>
+<div id="mayalihane" class="section-head"><h3 style="color:#fff">Mayalıhane</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Cookie · Düşük Proteinli</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/mayali-hane-dusuk-proteinli-ve-glutensiz-61bc.jpg" alt="Protein Azaltılmış Tuzlu Çubuk"></div><div class="body"><div class="brand-tag">Mayalıhane</div><p class="product-name">Protein Azaltılmış Tuzlu Çubuk</p><p class="product-desc">düşük proteinli tuzlu çubuk</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/mayali-hane-dusuk-proteinli-ve-glutensiz-c03f.jpg" alt="Protein Azaltılmış Üzümlü Kurabiye"></div><div class="body"><div class="brand-tag">Mayalıhane</div><p class="product-name">Protein Azaltılmış Üzümlü Kurabiye</p><p class="product-desc">düşük proteinli üzümlü kurabiye</p></div></div>
@@ -566,7 +573,7 @@
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/mayali-hane-glutensiz-cevizli-tarcinli-21d853.png" alt="Glutensiz Cevizli Tarçınlı Kurabiye"></div><div class="body"><div class="brand-tag">Mayalıhane</div><p class="product-name">Glutensiz Cevizli Tarçınlı Kurabiye</p><p class="product-desc">ceviz ve tarçınlı glutensiz kurabiye</p></div></div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">GFPort</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Cookie · Galeta</p></div>
+<div id="gfport" class="section-head"><h3 style="color:#fff">GFPort</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Cookie · Galeta</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/Gfport-Tahinli-Cookie.jpg" alt="Tahinli Cookie"></div><div class="body"><div class="brand-tag">GFPort</div><p class="product-name">Tahinli Cookie</p><p class="product-desc">tahinli glutensiz cookie</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/Gfport-Aycekirdekli-Galeta-125-gr.jpg" alt="Ayçekirdekli Galeta"></div><div class="body"><div class="brand-tag">GFPort</div><p class="product-name">Ayçekirdekli Galeta</p><p class="product-desc">ayçekirdekli glutensiz galeta</p></div></div>
@@ -602,7 +609,7 @@
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/10.png" alt="Tahinli Cevizli Tarçınlı Kurabiye"></div><div class="body"><div class="brand-tag">Tahinly</div><p class="product-name">Tahinli Cevizli Tarçınlı Kurabiye</p><p class="product-desc">tahin + ceviz + tarçınlı kurabiye</p></div></div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">Tomru</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Cantuccini · Dolgulu Cookie · Tuzlu Cookie</p></div>
+<div id="tomru" class="section-head"><h3 style="color:#fff">Tomru</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Cantuccini · Dolgulu Cookie · Tuzlu Cookie</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/tomru-cantuccini-glutensiz-1600x2400h.webp" alt="Glutensiz Cantuccini"></div><div class="body"><div class="brand-tag">Tomru</div><p class="product-name">Glutensiz Cantuccini</p><p class="product-desc">klasik glutensiz cantuccini</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/incir-1-1600x2400h.webp" alt="İncir Dolgulu Kurabiye"></div><div class="body"><div class="brand-tag">Tomru</div><p class="product-name">İncir Dolgulu Kurabiye</p><p class="product-desc">incir dolgulu glutensiz kurabiye</p></div></div>
@@ -613,7 +620,7 @@
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/tomru-tahin-dolgulu-kurabiye-1600x2400h.webp" alt="Tahin Dolgulu Kurabiye"></div><div class="body"><div class="brand-tag">Tomru</div><p class="product-name">Tahin Dolgulu Kurabiye</p><p class="product-desc">tahin dolgulu glutensiz kurabiye</p></div></div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">The Good Wild</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Galeta · Protein Cookie</p></div>
+<div id="the-good-wild" class="section-head"><h3 style="color:#fff">The Good Wild</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Galeta · Protein Cookie</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/tgw_e_ticaret_gorselleri_atistirmaliklar-5.webp" alt="Lokmalık Galeta — Filizlendirilmiş Çiğ Karabuğday"></div><div class="body"><div class="brand-tag">The Good Wild</div><p class="product-name">Lokmalık Galeta — Filizlendirilmiş Çiğ Karabuğday</p><p class="product-desc">filizlendirilmiş çiğ karabuğday galetası</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/tgw_web_yer_fistikli_protein_kurabiye-1.webp" alt="Yer Fıstıklı Protein Kurabiye"></div><div class="body"><div class="brand-tag">The Good Wild</div><p class="product-name">Yer Fıstıklı Protein Kurabiye</p><p class="product-desc">yer fıstıklı proteinli kurabiye</p></div></div>
@@ -657,7 +664,7 @@
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/Ekran%20Resmi%202026-03-13%2015.55.58.png" alt="Karabuğdaylı Haşhaşlı Grissini"></div><div class="body"><div class="brand-tag">GetFit</div><p class="product-name">Karabuğdaylı Haşhaşlı Grissini</p><p class="product-desc">karabuğday + haşhaşlı grissini</p></div></div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">Balanu</h3><p style="color:rgba(255,255,255,.5)">Fonksiyonel Cookie · Brownie · Badem Unu Bazlı</p></div>
+<div id="balanu" class="section-head"><h3 style="color:#fff">Balanu</h3><p style="color:rgba(255,255,255,.5)">Fonksiyonel Cookie · Brownie · Badem Unu Bazlı</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/balanu-dusuk-sekerli-tarcinli-badem-kurabiyesi-200gr-balanu-8429962_1080x.webp" alt="Düşük Şekerli Tarçınlı Badem Kurabiyesi"></div><div class="body"><div class="brand-tag">Balanu</div><p class="product-name">Düşük Şekerli Tarçınlı Badem Kurabiyesi</p><p class="product-desc">tarçın + badem · düşük şekerli fonksiyonel kurabiye</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/balanu-proteinli-kakaolu-badem-kurabiyesi-240gr-balanu-8860066_1080x.webp" alt="Proteinli Kakaolu Badem Kurabiyesi"></div><div class="body"><div class="brand-tag">Balanu</div><p class="product-name">Proteinli Kakaolu Badem Kurabiyesi</p><p class="product-desc">kakao + badem · proteinli fonksiyonel kurabiye</p></div></div>
@@ -666,7 +673,7 @@
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/94_1080x.webp" alt="Proteinli Badem Kurabiyesi — Kutu"></div><div class="body"><div class="brand-tag">Balanu</div><p class="product-name">Proteinli Badem Kurabiyesi — Kutu</p><p class="product-desc">kakaolu + klasik · proteinli badem kurabiyesi kutusu</p></div></div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">Muscle Cheff · Repeats PRO</h3><p style="color:rgba(255,255,255,.5)">Protein Cookie · Yerli Üretim</p></div>
+<div id="muscle-cheff" class="section-head"><h3 style="color:#fff">Muscle Cheff · Repeats PRO</h3><p style="color:rgba(255,255,255,.5)">Protein Cookie · Yerli Üretim</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/musclecheff1.webp" alt="Double Chocolate Chip Protein Cookie"></div><div class="body"><div class="brand-tag">Muscle Cheff</div><p class="product-name">Double Chocolate Chip Protein Cookie</p><p class="product-desc">çift çikolatalı protein cookie · 16g protein</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/musclecheff2.jpg" alt="Protein Cookie 4'lü Paket"></div><div class="body"><div class="brand-tag">Muscle Cheff</div><p class="product-name">Protein Cookie 4'lü Paket</p><p class="product-desc">4 adet çikolata parçalı protein cookie</p></div></div>
@@ -697,7 +704,7 @@
   </div>
 </div>
 
-<div class="section-head"><h3 style="color:#fff">Naked Bites</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Biscotti · Grissini · Kraker · Kurabiye</p></div>
+<div id="naked-bites" class="section-head"><h3 style="color:#fff">Naked Bites</h3><p style="color:rgba(255,255,255,.5)">Glutensiz Biscotti · Grissini · Kraker · Kurabiye</p></div>
 <div class="grid grid-2">
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/nb-biscotti.png" alt="Bademli Biscotti"></div><div class="body"><div class="brand-tag">Naked Bites</div><p class="product-name">Bademli Biscotti</p><p class="product-desc">yulaf + badem unu · şeker ilavesiz · protein kaynağı</p></div></div>
   <div class="card"><div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/nb-grissini2.png" alt="Otlu Baharatlı Grissini"></div><div class="body"><div class="brand-tag">Naked Bites</div><p class="product-name">Otlu Baharatlı Grissini</p><p class="product-desc">nohut + badem unu · zeytinyağı · tütsülenmiş biber</p></div></div>
@@ -933,7 +940,7 @@
   </div>
 </div>
 
-<div class="section-head"><h3>Seri 1 — Klasik Cantuccini</h3><p>İtalyan kahve kültürüyle doğmuş, premium rafine snack kategorisi</p></div>
+<div id="kategori-2" class="section-head"><h3>Seri 1 — Klasik Cantuccini</h3><p>İtalyan kahve kültürüyle doğmuş, premium rafine snack kategorisi</p></div>
 <div class="grid grid-2">
   <div class="card">
     <div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/b1.png" alt="Bademli Cantuccini"></div>
@@ -970,7 +977,7 @@
   </div>
 </div>
 
-<div class="section-head"><h3>Seri 2 — Modern Biscotti</h3><p>Alışılmışın dışına çıkan tat kombinasyonları, çağdaş snack ruhu</p></div>
+<div id="kategori-4" class="section-head"><h3>Seri 2 — Modern Biscotti</h3><p>Alışılmışın dışına çıkan tat kombinasyonları, çağdaş snack ruhu</p></div>
 <div class="grid grid-2">
   <div class="card">
     <div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/b5.png" alt="Cranberry Badem Biscotti"></div>
@@ -1134,7 +1141,7 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 1 — Klasik Protein Cookie</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
 
   <!-- Üst kısım: foto + bilgi -->
@@ -1654,7 +1661,7 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 2 — Türk Damağına Özel</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
 
   <!-- Üst kısım: foto + bilgi -->
@@ -2198,7 +2205,7 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 3 — Fonksiyonel Protein Cookie</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
 
   <!-- Üst kısım: foto + bilgi -->
@@ -2638,7 +2645,7 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 4 — Dolgulu Protein Cookie</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
 
   <!-- Üst kısım: foto + bilgi -->
@@ -2998,7 +3005,7 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 5 — Düşük Karbonhidrat Protein Cookie</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
 
   <!-- Üst kısım: foto + bilgi -->
@@ -3462,7 +3469,7 @@
   <div style="margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e8e2d8;">
     <h4 style="font-size:12px;font-weight:700;color:#555;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px;">Seri A — Un Referanslı</h4>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
@@ -4074,7 +4081,7 @@
     <h4 style="font-size:12px;font-weight:700;color:#555;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px;">Seri B — Tat Referanslı</h4>
     <p style="font-size:11px;color:#aaa;margin:0;font-style:italic;">Tat ve malzeme öne çıkar · Geniş tüketici kitlesi</p>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
@@ -4551,7 +4558,7 @@
     <h4 style="font-size:12px;font-weight:700;color:#555;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px;">Seri C — Tuzlu & Aperitif</h4>
     <p style="font-size:11px;color:#aaa;margin:0;font-style:italic;">Akdeniz ve Türk mutfağı tatları · Aperitif, peynir tabağı, kahve yanı</p>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
@@ -4868,7 +4875,7 @@
     <h4 style="font-size:12px;font-weight:700;color:#555;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px;">Seri D — Protein Destekli</h4>
     <p style="font-size:11px;color:#aaa;margin:0;font-style:italic;">Temel formlar korunur, bezelye proteiniyle güçlendirilir · Protein claim öne çıkar</p>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
@@ -5179,7 +5186,7 @@
 </div>
 
 <div class="section-head" style="margin-top:32px"><h3>Proteinli Grissini</h3></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
@@ -5403,7 +5410,7 @@
 </div>
 
 <div class="section-head" style="margin-top:32px"><h3>Glutensiz Grissini</h3></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
@@ -5627,7 +5634,7 @@
 </div>
 
 <div class="section-head" style="margin-top:32px"><h3>Protein Kraker</h3></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
     <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
