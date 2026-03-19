@@ -429,17 +429,44 @@
       }
     }
 
-    @media(max-width:640px){
-      .mobile-col-fix {
+    @media(max-width:900px){
+      .mobile-col-fix,
+      div.mobile-col-fix,
+      [class~="mobile-col-fix"] {
         display: flex !important;
         flex-direction: column !important;
+        width: 100% !important;
+      }
+      .k4-outer-grid,
+      div.k4-outer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
       }
     }
 
-    @media(max-width:640px){
-      .k4-outer-grid {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
+
+
+    @media(max-width:900px){
+      /* K4 kart foto bloğu tam genişlik */
+      .mobile-col-fix > div:first-child {
+        width: 100% !important;
+        min-height: 200px !important;
+      }
+      .mobile-col-fix > div:first-child img {
+        width: 100% !important;
+        max-height: 240px !important;
+        object-fit: contain !important;
+      }
+      /* K4 kart bilgi bloğu tam genişlik */
+      .mobile-col-fix > div:last-child {
+        width: 100% !important;
+      }
+    }
+
+    @media(max-width:900px){
+      .k4-outer-grid > div {
+        flex: 0 0 100% !important;
+        width: 100% !important;
       }
     }
   </style>
@@ -940,7 +967,7 @@
   </div>
 </div>
 
-<div id="kategori-2" class="section-head"><h3>Seri 1 — Klasik Cantuccini</h3><p>İtalyan kahve kültürüyle doğmuş, premium rafine snack kategorisi</p></div>
+<div class="section-head"><h3>Seri 1 — Klasik Cantuccini</h3><p>İtalyan kahve kültürüyle doğmuş, premium rafine snack kategorisi</p></div>
 <div class="grid grid-2">
   <div class="card">
     <div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/b1.png" alt="Bademli Cantuccini"></div>
@@ -977,7 +1004,7 @@
   </div>
 </div>
 
-<div id="kategori-4" class="section-head"><h3>Seri 2 — Modern Biscotti</h3><p>Alışılmışın dışına çıkan tat kombinasyonları, çağdaş snack ruhu</p></div>
+<div class="section-head"><h3>Seri 2 — Modern Biscotti</h3><p>Alışılmışın dışına çıkan tat kombinasyonları, çağdaş snack ruhu</p></div>
 <div class="grid grid-2">
   <div class="card">
     <div class="media"><img loading="lazy" decoding="async" src="https://wcs2026.github.io/b5.png" alt="Cranberry Badem Biscotti"></div>
@@ -1131,7 +1158,7 @@
 <tr style="background:#fff"><td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12.5px;font-weight:600;color:#2d241d">Peynir Biberiye Biscotti</td><td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#555">Seri 5 — Aperitif</td><td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#666">Aperitif Tuzlu · 90g</td><td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#666">Parmesan · Biberiye</td><td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;white-space:nowrap">10 hafta</td></tr>
 </tbody></table></div>
 
-<div class="section-head"><h3>Kategori 2 — Protein Cookie</h3><p>Tekli büyük format · 60–100g · 5 seri · 20 SKU</p></div>
+<div id="kategori-2" class="section-head"><h3>Kategori 2 — Protein Cookie</h3><p>Tekli büyük format · 60–100g · 5 seri · 20 SKU</p></div>
 <div style="background:var(--dark);border-radius:12px;padding:16px 20px;margin-bottom:20px">
   <p style="color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px">Piyasadaki Boşluk</p>
   <p style="color:#ccc;font-size:13px;margin:0 0 12px;line-height:1.75">Piyasadaki protein cookie'lerin büyük kısmı kuru ve yapay hissediyor. Bu kategori: <strong style="color:#fff">→ yumuşak iç doku → tatmin edici lezzet → yüksek protein</strong> sunan ürünler geliştirme fırsatı yaratır.</p>
@@ -1141,8 +1168,8 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 1 — Klasik Protein Cookie</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -1246,7 +1273,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -1350,7 +1377,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -1454,7 +1481,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -1552,7 +1579,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -1661,8 +1688,8 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 2 — Türk Damağına Özel</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -1766,7 +1793,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -1876,7 +1903,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -1986,7 +2013,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -2090,7 +2117,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -2205,8 +2232,8 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 3 — Fonksiyonel Protein Cookie</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -2316,7 +2343,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -2426,7 +2453,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -2536,7 +2563,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -2645,8 +2672,8 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 4 — Dolgulu Protein Cookie</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -2768,7 +2795,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -2884,7 +2911,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -3005,8 +3032,8 @@
 
 <div style="margin-bottom:10px;">
   <div class="section-head" style="margin-top:32px"><h3>Seri 5 — Düşük Karbonhidrat Protein Cookie</h3></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -3104,7 +3131,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -3208,7 +3235,7 @@
   </div>
 
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
 
   <!-- Üst kısım: foto + bilgi -->
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
@@ -3469,8 +3496,8 @@
   <div style="margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e8e2d8;">
     <h4 style="font-size:12px;font-weight:700;color:#555;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px;">Seri A — Un Referanslı</h4>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k1.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-01" />
@@ -3541,7 +3568,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 10–12 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k2.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-02" />
@@ -3612,7 +3639,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 10–12 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k3.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-03" />
@@ -3688,7 +3715,7 @@
     <p style="font-size:11px;color:#666;margin:0 0 2px;"><span style="font-weight:500;color:#333;">Doku:</span> Pudra gibi dağılan, eritilen his — tarçın aromalı, sorghum unun nötr tadı sablé yapısında dengeleniyor</p>
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
-</div><div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+</div><div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k4.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-04" />
@@ -3765,7 +3792,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k5.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-05" />
@@ -3842,7 +3869,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k6.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-06" />
@@ -3919,7 +3946,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k7.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-07" />
@@ -3996,7 +4023,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k8.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-08" />
@@ -4081,8 +4108,8 @@
     <h4 style="font-size:12px;font-weight:700;color:#555;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px;">Seri B — Tat Referanslı</h4>
     <p style="font-size:11px;color:#aaa;margin:0;font-style:italic;">Tat ve malzeme öne çıkar · Geniş tüketici kitlesi</p>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k9.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-09" />
@@ -4165,7 +4192,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k10.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-10" />
@@ -4242,7 +4269,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k11.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-11" />
@@ -4319,7 +4346,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k12.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-12" />
@@ -4396,7 +4423,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 10–12 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k13.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-13" />
@@ -4473,7 +4500,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k14.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-14" />
@@ -4558,8 +4585,8 @@
     <h4 style="font-size:12px;font-weight:700;color:#555;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px;">Seri C — Tuzlu & Aperitif</h4>
     <p style="font-size:11px;color:#aaa;margin:0;font-style:italic;">Akdeniz ve Türk mutfağı tatları · Aperitif, peynir tabağı, kahve yanı</p>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k15.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-15" />
@@ -4636,7 +4663,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 10–12 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k16.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-16" />
@@ -4713,7 +4740,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k17.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-17" />
@@ -4790,7 +4817,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 10–12 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k18.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-18" />
@@ -4875,8 +4902,8 @@
     <h4 style="font-size:12px;font-weight:700;color:#555;letter-spacing:.07em;text-transform:uppercase;margin:0 0 3px;">Seri D — Protein Destekli</h4>
     <p style="font-size:11px;color:#aaa;margin:0;font-style:italic;">Temel formlar korunur, bezelye proteiniyle güçlendirilir · Protein claim öne çıkar</p>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k19.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-19" />
@@ -4959,7 +4986,7 @@
     <p style="font-size:11px;color:#aaa;margin:0;"><span style="font-weight:500;color:#666;">Raf ömrü:</span> 8–10 hafta</p>
   </div>
 </div>
-<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff8f0;display:flex;align-items:center;justify-content:center;padding:20px;min-height:210px;flex-direction:column;gap:8px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/k20.png" style="width:100%;height:200px;object-fit:contain;display:block;" alt="K-20" />
@@ -5178,7 +5205,7 @@
 
 
 
-<div class="section-head"><h3>Kategori 4 — Tuzlu Çubuk &amp; Kraker</h3><p>Proteinli Grissini · Glutensiz Grissini · Protein Kraker · 16 SKU</p></div>
+<div id="kategori-4" class="section-head"><h3>Kategori 4 — Tuzlu Çubuk &amp; Kraker</h3><p>Proteinli Grissini · Glutensiz Grissini · Protein Kraker · 16 SKU</p></div>
 
 <div style="background:var(--dark);border-radius:12px;padding:16px 20px;margin-bottom:20px">
   <p style="color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px">Format Özeti</p>
@@ -5186,8 +5213,8 @@
 </div>
 
 <div class="section-head" style="margin-top:32px"><h3>Proteinli Grissini</h3></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pg1.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5231,7 +5258,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pg2.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5275,7 +5302,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pg3.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5319,7 +5346,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pg4.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5363,7 +5390,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pg5.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5410,8 +5437,8 @@
 </div>
 
 <div class="section-head" style="margin-top:32px"><h3>Glutensiz Grissini</h3></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/gg1.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5455,7 +5482,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/gg2.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5499,7 +5526,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/gg3.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5543,7 +5570,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/gg4.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5587,7 +5614,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/gg5.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5634,8 +5661,8 @@
 </div>
 
 <div class="section-head" style="margin-top:32px"><h3>Protein Kraker</h3></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+<div style="display:flex;flex-wrap:wrap;gap:14px;align-items:start;margin-bottom:8px;" class="k4-outer-grid">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pk1.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5679,7 +5706,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pk2.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5723,7 +5750,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pk3.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5767,7 +5794,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pk4.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5811,7 +5838,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pk5.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
@@ -5855,7 +5882,7 @@
     
   </div>
 </div>
-    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+    <div style="background:#fdfaf6;border:0.5px solid #e8e2d8;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;flex:0 0 calc(50% - 7px);min-width:0;">
   <div style="display:grid;grid-template-columns:1fr 1fr;" class="mobile-col-fix">
     <div style="background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;min-height:200px;">
       <img loading="lazy" decoding="async" src="https://wcs2026.github.io/pk6.png" style="width:100%;height:200px;object-fit:contain;display:block;" />
